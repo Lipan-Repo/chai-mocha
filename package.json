@@ -1,0 +1,31 @@
+{
+  "name": "unte-testnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=development mocha \"./{,!(node_modules)/**/}*.test.js\" --exit",
+    "test2": "cross-env NODE_ENV=development mocha './lib/**/*.test.js'",
+    "coverage": "cross-env NODE_ENV=development nyc --reporter=text npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "rewire": "^6.0.0",
+    "sinon": "^15.0.1",
+    "sinon-chai": "^3.7.0",
+    "superset": "^2.0.1",
+    "supertest": "^6.3.3"
+  }
+}
